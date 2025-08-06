@@ -86,12 +86,12 @@ const SearchResults = () => {
       try {
         // Fetch both users and posts in parallel
         const [usersRes, postsRes] = await Promise.all([
-          fetch(`http://localhost:5000/api/users?q=${query}`, {
+          fetch(`https://techadda.onrender.com/api/users?q=${query}`, {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
           }),
-          fetch(`http://localhost:5000/api/posts/search?q=${query}`, {
+          fetch(`https://techadda.onrender.com/api/posts/search?q=${query}`, {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
             },

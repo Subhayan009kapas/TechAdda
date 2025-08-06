@@ -15,7 +15,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchUserPosts = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/posts/myposts", {
+        const res = await fetch("https://techadda.onrender.com/api/posts/myposts", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -38,7 +38,7 @@ const Profile = () => {
   const handleDeletePost = async (postId) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/posts/${postId}`,
+        `https://techadda.onrender.com/api/posts/${postId}`,
         {
           method: "DELETE",
           headers: {

@@ -30,7 +30,7 @@ const PostCard = ({ post, condensed = false, onDeleteSuccess }) => {
     if (!window.confirm("Are you sure you want to delete this post?")) return;
 
     try {
-      const res = await fetch(`http://localhost:5000/api/posts/${post._id}`, {
+      const res = await fetch(`https://techadda.onrender.com/api/posts/${post._id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,

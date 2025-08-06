@@ -26,8 +26,8 @@ const Feed = () => {
     setLoading(true); // In case it's a reload after post/delete
     try {
       const endpoint = query
-        ? `http://localhost:5000/api/posts/search-by-author?q=${query}`
-        : "http://localhost:5000/api/posts";
+        ? `https://techadda.onrender.com/api/posts/search-by-author?q=${query}`
+        : "https://techadda.onrender.com/api/posts";
 
       const res = await fetch(endpoint);
       const data = await res.json();
@@ -48,7 +48,7 @@ const Feed = () => {
     if (!content.trim()) return;
 
     try {
-      const res = await fetch("http://localhost:5000/api/posts", {
+      const res = await fetch("https://techadda.onrender.com/api/posts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

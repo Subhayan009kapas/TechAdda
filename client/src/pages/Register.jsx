@@ -27,7 +27,7 @@ const Register = () => {
     setError("");
 
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/register", form);
+      const res = await axios.post("https://techadda.onrender.com/api/auth/register", form);
       login(res.data.token, res.data.user);
       navigate("/login");
     } catch (err) {
