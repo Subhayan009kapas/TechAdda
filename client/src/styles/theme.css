@@ -1,0 +1,22 @@
+
+:root {
+  /* Backgrounds */
+  --bg-primary: #0f0f0f;
+  --bg-secondary: #1c1c1e;
+  --bg-card: #212124;
+
+  /* Text */
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --text-muted: #888888;
+
+  /* Accent & Borders */
+  --accent: #3b82f6;
+  --border-color: #2a2a2d;
+  --danger: #ef4444;
+  --success: #10b981;
+
+  /* Hover/Active States */
+  --hover-bg: #2c2c2e;
+  --active-bg: #3a3a3d;
+}

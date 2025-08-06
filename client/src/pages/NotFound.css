@@ -1,0 +1,12 @@
+.notfound-container {
+  text-align: center;
+  color: #fff;
+  padding: 4rem;
+}
+
+.back-home-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #61dafb;
+  text-decoration: none;
+}

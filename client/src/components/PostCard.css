@@ -1,0 +1,169 @@
+.post-card {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border-radius: 12px;
+  padding: 1.2rem;
+  margin-bottom: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+.post-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(135deg, var(--accent), #6e45e2);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-right: 0.8rem;
+}
+
+.post-author {
+  flex: 1;
+}
+
+.post-author h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.post-author span {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.post-actions {
+  position: relative;
+}
+
+.actions-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.actions-btn:hover {
+  background-color: var(--hover-bg);
+  color: var(--text-primary);
+}
+
+.actions-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--bg-card);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+  z-index: 10;
+  min-width: 120px;
+  animation: fadeIn 0.2s;
+}
+
+.actions-dropdown button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  background: none;
+  border: none;
+  color: #e74c3c;
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.actions-dropdown button:hover {
+  background-color: rgba(231, 76, 60, 0.1);
+}
+
+.post-content p {
+  margin-top: 0.5rem;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+  .post-card {
+    padding: 1rem;
+  }
+  
+  .avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+  
+  .post-author h4 {
+    font-size: 1rem;
+  }
+}
+
+/* Add to existing PostCard.css */
+.post-card.condensed {
+  padding: 1rem;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.post-card.condensed:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent);
+}
+
+.post-card.condensed .post-header {
+  margin-bottom: 0.8rem;
+}
+
+.post-card.condensed .avatar {
+  width: 36px;
+  height: 36px;
+  font-size: 1rem;
+}
+
+.post-card.condensed .post-author h4 {
+  font-size: 1rem;
+}
+
+.post-card.condensed .post-content p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
